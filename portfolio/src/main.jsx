@@ -7,6 +7,6 @@ import AppBar from "../components/NavBar";
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
 		<AppBar />
-		<App />
+		{/* <App /> */}
 	</React.StrictMode>
 );
