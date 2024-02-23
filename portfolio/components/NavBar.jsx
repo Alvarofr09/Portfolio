@@ -7,13 +7,16 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
+import SettingsIcon from "@mui/icons-material/Settings";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
-const pages = ["Products", "Pricing", "Blog"];
+import logo from "../src/assets/logo_Portfolio.png";
+import "../styles/NavBar.css";
+
+const pages = ["Sobre Mi", "Proyectos", "Contacto"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -37,6 +40,7 @@ function ResponsiveAppBar() {
 
 	return (
 		<AppBar position="static">
+			<img src={logo} className="Logo" />
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
 					<AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -127,9 +131,10 @@ function ResponsiveAppBar() {
 
 					<Box sx={{ flexGrow: 0 }}>
 						<Tooltip title="Open settings">
-							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-								<Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-							</IconButton>
+							<SettingsIcon
+								onClick={handleOpenUserMenu}
+								sx={{ p: 0 }}
+							></SettingsIcon>
 						</Tooltip>
 						<Menu
 							sx={{ mt: "45px" }}
