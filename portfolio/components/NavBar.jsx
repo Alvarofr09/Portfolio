@@ -1,8 +1,7 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
+// import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -13,11 +12,22 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
+// Importaciones para el logo
 import logo from "../src/assets/logo_Portfolio.png";
 import "../styles/NavBar.css";
 
+// Importaciones para el toggle switch
+import IconButton from "@mui/material/IconButton";
+import Box from "@mui/material/Box";
+import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
+import Color, { useState, useMemo, useContext, useEffect } from "react";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { useMediaQuery } from "@mui/material";
+const ColorModeContext = Color.createContext({ toggleColorMode: () => {} });
+
 const pages = ["Sobre Mi", "Proyectos", "Contacto"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = [<ColorSwitch />, "Account"];
 
 function ResponsiveAppBar() {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,15 +50,14 @@ function ResponsiveAppBar() {
 
 	return (
 		<AppBar position="static">
-			<img src={logo} className="Logo" />
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					<AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+					{/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
 					<Typography
 						variant="h6"
 						noWrap
 						component="a"
-						href="#app-bar-with-responsive-menu"
+						href="#"
 						sx={{
 							mr: 2,
 							display: { xs: "none", md: "flex" },
@@ -59,7 +68,7 @@ function ResponsiveAppBar() {
 							textDecoration: "none",
 						}}
 					>
-						LOGO
+						<img src={logo} className="Logo" />
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -98,7 +107,7 @@ function ResponsiveAppBar() {
 							))}
 						</Menu>
 					</Box>
-					<AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+					{/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
 					<Typography
 						variant="h5"
 						noWrap
@@ -115,7 +124,7 @@ function ResponsiveAppBar() {
 							textDecoration: "none",
 						}}
 					>
-						LOGO
+						<img src={logo} className="Logo" />
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
 						{pages.map((page) => (
@@ -164,4 +173,76 @@ function ResponsiveAppBar() {
 		</AppBar>
 	);
 }
-export default ResponsiveAppBar;
+
+function ColorSwitch() {
+	const theme = useTheme();
+	const colorMode = useContext(ColorModeContext);
+
+	return (
+		<Box
+			sx={{
+				display: "flex",
+				width: "100%",
+				alignItems: "center",
+				justifyContent: "center",
+				bgcolor: "background.default",
+				color: "text.primary",
+				borderRadius: 1,
+				p: 3,
+			}}
+		>
+			{theme.palette.mode} mode
+			<IconButton
+				sx={{ ml: 1 }}
+				onClick={colorMode.toggleColorMode}
+				color="inherit"
+			>
+				{theme.palette.mode === "dark" ? (
+					<Brightness7Icon />
+				) : (
+					<Brightness4Icon />
+				)}
+			</IconButton>
+		</Box>
+	);
+}
+
+export function ToggleColorMode() {
+	const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+	const [mode, setMode] = useState(prefersDarkMode ? "dark" : "light");
+
+	const colorMode = useMemo(
+		() => ({
+			toggleColorMode: () => {
+				setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+			},
+		}),
+		[]
+	);
+
+	const theme = useMemo(
+		() =>
+			createTheme({
+				palette: {
+					mode,
+				},
+			}),
+		[mode]
+	);
+
+	useEffect(() => {
+		if (prefersDarkMode && mode === "light") {
+			setMode("dark");
+		}
+	}, [prefersDarkMode]);
+
+	return (
+		<ColorModeContext.Provider value={colorMode}>
+			<ThemeProvider theme={theme}>
+				<ResponsiveAppBar />
+			</ThemeProvider>
+		</ColorModeContext.Provider>
+	);
+}
+
+export default ToggleColorMode;
