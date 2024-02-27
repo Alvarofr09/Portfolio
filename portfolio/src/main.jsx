@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // import App from "./App.jsx";
 import "./index.css";
-import AppBar from "../components/NavBar";
+import ToggleColorMode from "../components/NavBar";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<AppBar />
+		<ToggleColorMode />
 		{/* <App /> */}
 	</React.StrictMode>
 );
