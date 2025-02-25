@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+	--breakpoint-*: initial;
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 976px;
+
+	/* --color-background: #572364; */
+	/* --color-background: #78288c; */
+	--color-morado-1: #7b00b2;
+	--color-morado-2: #8e22bb;
+	--color-morado-3: #ab49cc;
+	--color-verde-1: #77dd77;
+	--color-verde-2: #a9e9a4;
+}

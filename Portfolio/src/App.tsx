@@ -11,7 +11,7 @@ import { Key } from "react";
 function App() {
 	return (
 		<>
-			<div>
+			<div className="bg-background">
 				<div>
 					<header>
 						<div>
