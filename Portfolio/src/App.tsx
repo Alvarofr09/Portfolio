@@ -1,5 +1,10 @@
 import "./App.css";
 import Card from "./components/Card";
+import experience from "./data/experience.json";
+//import projects from "./data/projects.json";
+
+import { CardProps } from "./components/Card";
+import { Key } from "react";
 
 //https://brittanychiang.com/#about Portfolio a seguir
 
@@ -55,8 +60,11 @@ function App() {
 							</div>
 						</section>
 						<section id="experience">
-							<Card />
-							<Card />
+							{experience.map(
+								(item: CardProps, index: Key | null | undefined) => (
+									<Card key={index} {...item} />
+								)
+							)}
 						</section>
 						<section id="projects"></section>
 					</main>
