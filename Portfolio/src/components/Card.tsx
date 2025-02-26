@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({
 				{isProject ? (
 					<img src={image} alt="{enterprise}_image" />
 				) : (
-					<span>{duration}</span>
+					<span className="uppercase">{duration}</span>
 				)}
 			</header>
 			<div className="sm:col-span-6">
