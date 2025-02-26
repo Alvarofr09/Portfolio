@@ -1,6 +1,7 @@
 [
 	{
 		"isProject": false,
+		"duration": "Abr — Jun 2024",
 		"role": "Desarrollador Full Stack",
 		"enterprise": "Trademiun",
 		"description": "Como desarrollador principal, fui responsable del backend, la gestión de la base de datos y la creación de API REST, contribuyendo significativamente a las plataformas web y móvil.",
@@ -21,6 +22,7 @@
 	},
 	{
 		"isProject": false,
+		"duration": "Mar — Jun 2023",
 		"role": "Practicante de Desarrollo Web",
 		"enterprise": "Seb Creativos",
 		"description": "Durante mi pasantía en Seb Creativos, fui responsable de crear plantillas completas de páginas web, personalizar e integrar complementos, y abordar con éxito objetivos de proyectos previamente no cumplidos.",
