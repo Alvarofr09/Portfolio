@@ -26,8 +26,11 @@ function App() {
 							<h1 className="text-4xl font-bold sm:text-5xl">
 								Alvaro Frias Ruiz
 							</h1>
-							<h2 className="text-2xl font-bold">Full Stack Developer</h2>
-							<p>Texto a poner</p>
+							<h2 className="text-2xl font-bold mt-3">Full Stack Developer</h2>
+							<p className="mt-4 max-w-xs leading-normal">
+								Desarrollador Web con ganas de trabajar y expandir mis
+								conocimientos
+							</p>
 							<Nav items={navItems} />
 						</div>
 
