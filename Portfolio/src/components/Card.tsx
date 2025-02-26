@@ -1,7 +1,9 @@
 import React from "react";
+import Technologies from "./Technologies";
 
 export interface CardProps {
 	isProject: boolean;
+	duration?: string;
 	role: string;
 	enterprise: string;
 	description: string;
@@ -16,6 +18,7 @@ export interface CardProps {
 
 const Card: React.FC<CardProps> = ({
 	isProject,
+	duration,
 	role,
 	enterprise,
 	description,
@@ -24,29 +27,31 @@ const Card: React.FC<CardProps> = ({
 	links,
 }) => {
 	return (
-		<div>
-			<header>
-				{isProject ? <img src={image} alt="{enterprise}_image" /> : <h4></h4>}
+		<div className="mb-10 group grid pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4">
+			<header className="sm:col-span-2">
+				{isProject ? (
+					<img src={image} alt="{enterprise}_image" />
+				) : (
+					<span>{duration}</span>
+				)}
 			</header>
-			<div>
+			<div className="sm:col-span-6">
 				<h3>
 					<div></div>
-					<a href={isProject ? links.enterprise : links.github}>
+					<a
+						href={isProject ? links.enterprise : links.github}
+						className="group-hover:text-red-600"
+					>
 						<span>
 							{role} · <span>{enterprise}</span>
 						</span>
 					</a>
 				</h3>
-				<p>{description}</p>
+				<p className="mt-2">{description}</p>
 				{/* <ul>
 					<li></li>
 				</ul> */}
-				<ul>
-					{technologies.map((technology) => (
-						<li>{technology}</li>
-					))}
-					<li></li>
-				</ul>
+				<Technologies technologies={technologies} />
 			</div>
 		</div>
 	);
