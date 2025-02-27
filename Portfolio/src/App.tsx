@@ -1,22 +1,55 @@
 import "./App.css";
+import { Key, useEffect, useState } from "react";
+
 import Card from "./components/Card";
+import { CardProps } from "./components/Card";
+import Nav from "./components/Nav";
+import Link from "./components/Link";
+
+import studies from "./data/studies.json";
 import experience from "./data/experience.json";
 //import projects from "./data/projects.json";
 
-import { CardProps } from "./components/Card";
-import { Key } from "react";
 import { FaEye, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import Nav from "./components/Nav";
 import { MdEmail } from "react-icons/md";
+import { TbBrandGmail } from "react-icons/tb";
 
 const navItems = [
-	{ id: "content", title: "Sobre mi" },
+	{ id: "about", title: "Sobre mi" },
+	{ id: "studies", title: "Estudios" },
 	{ id: "experience", title: "Experiencia" },
 	{ id: "projects", title: "Proyectos" },
 ];
-//https://brittanychiang.com/#about Portfolio a seguir
+//https://brittanychiang.com/#about
+
+// TODO: Subir curriculums a la carpeta public
 
 function App() {
+	const [activeSection, setActiveSection] = useState<string>("");
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setActiveSection(entry.target.id);
+					}
+				});
+			},
+			{ threshold: 0.5 }
+		);
+
+		const sections = document.querySelectorAll("section");
+		sections.forEach((section) => {
+			observer.observe(section);
+		});
+
+		return () => {
+			sections.forEach((section) => {
+				observer.unobserve(section);
+			});
+		};
+	}, []);
 	return (
 		<>
 			<div className="  mx-auto min-h-screen max-w-7xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
@@ -31,7 +64,7 @@ function App() {
 								Desarrollador Web con ganas de trabajar y expandir mis
 								conocimientos
 							</p>
-							<Nav items={navItems} />
+							<Nav items={navItems} activeSection={activeSection} />
 						</div>
 
 						<ul className="flex gap-6 ml-1 mt-6">
@@ -56,9 +89,9 @@ function App() {
 						</ul>
 					</header>
 					<main id="content" className=" pt-24 lg:w-[54%] lg:py-24">
-						<section id="about" className="mb-12">
+						<section id="about" className="scroll-mt-16 lg:scroll-mt-24">
 							<div>
-								<p className="mb-4">
+								<p className="mb-4 text-">
 									{" "}
 									Soy un desarrollador apasionado con un fuerte interés en la
 									programación tanto Backend como Frontend, siempre con ganas de
@@ -76,57 +109,95 @@ function App() {
 								</p>
 							</div>
 						</section>
-						<section className="mb-12">
+						<section className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
 							<div className="flex gap-4">
 								<a
 									href=""
 									target="_blank"
 									rel="noopener noreferrer"
-									className="inline-flex items-center gap-2"
+									className="inline-flex items-center gap-2 font-medium text-texto-titulos hover:text-texto-enfasis focus-visible:text-texto-enfasis"
 								>
 									<span>Ver curriculum</span>
 									<FaEye className="h-4 w-4 " />
 								</a>
 								<a
-									href=""
+									href="mailto:alvarofriasruiz03@gmail.com?subject=Consulta%20sobre%20tu%20perfil"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="inline-flex items-center gap-2"
+									className="inline-flex items-center gap-2 font-medium text-texto-titulos hover:text-texto-enfasis focus-visible:text-texto-enfasis"
 								>
 									<span>Contactame </span>
 									<MdEmail className="h-4 w-4 " />
 								</a>
+								<a
+									href="https://mail.google.com/mail/?view=cm&fs=1&to=alvarofriasruiz03@gmail.com&su=Consulta%20sobre%20tu%20perfil"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="inline-flex items-center gap-2 font-medium text-texto-titulos hover:text-texto-enfasis focus-visible:text-texto-enfasis"
+								>
+									<span>Contactame por gmail</span>
+									<TbBrandGmail className="h-4 w-4 " />
+								</a>
 							</div>
 						</section>
-						<section id="experience" className="mb-12">
-							{experience.map(
-								(item: CardProps, index: Key | null | undefined) => (
-									<Card key={index} {...item} />
-								)
-							)}
+						<section
+							id="studies"
+							className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+						>
+							<ol className="group/list">
+								{studies.map(
+									(item: CardProps, index: Key | null | undefined) => (
+										<Card key={index} {...item} />
+									)
+								)}
+							</ol>
 						</section>
-						<section id="experience" className="mb-12">
-							{experience.map(
-								(item: CardProps, index: Key | null | undefined) => (
-									<Card key={index} {...item} />
-								)
-							)}
+						<section
+							id="experience"
+							className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+						>
+							<ol className="group/list">
+								{experience.map(
+									(item: CardProps, index: Key | null | undefined) => (
+										<Card key={index} {...item} />
+									)
+								)}
+							</ol>
 						</section>
-						<section id="experience" className="mb-12">
-							{experience.map(
-								(item: CardProps, index: Key | null | undefined) => (
-									<Card key={index} {...item} />
-								)
-							)}
+
+						<section
+							id="projects"
+							className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+						>
+							<ol className="group/list">
+								{/* {projects.map(
+									(item: CardProps, index: Key | null | undefined) => (
+										<Card key={index} {...item} />
+									)
+								)} */}
+							</ol>
 						</section>
-						<section id="experience" className="mb-12">
-							{experience.map(
-								(item: CardProps, index: Key | null | undefined) => (
-									<Card key={index} {...item} />
-								)
-							)}
-						</section>
-						<section id="projects" className="mb-12"></section>
+						<footer className="max-w-md pb-16 text-sm text-salte-500 sm:pb-0">
+							<p>
+								Esta página web fue diseñada en{" "}
+								<Link href="https://www.canva.com/" text="Canva" /> y
+								desarrollado en{" "}
+								<Link
+									href="https://code.visualstudio.com/"
+									text="Visual Studio Code"
+								/>{" "}
+								hecho por mí. Desarrollado en{" "}
+								<Link href="https://es.react.dev/" text="React" />,{" "}
+								<Link
+									href="https://www.typescriptlang.org/"
+									text="Typescript"
+								/>{" "}
+								y <Link href="https://tailwindcss.com/" text="Tailwind" /> con{" "}
+								<Link href="https://vitejs.dev/" text="Vite" />, desplegado en{" "}
+								<Link href="https://vercel.com/" text="Vercel" /> y subido en{" "}
+								<Link href="https://github.com/" text="GitHub." />
+							</p>
+						</footer>
 					</main>
 				</div>
 			</div>
