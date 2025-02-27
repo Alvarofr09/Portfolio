@@ -91,21 +91,33 @@ function App() {
 					<main id="content" className=" pt-24 lg:w-[54%] lg:py-24">
 						<section id="about" className="scroll-mt-16 lg:scroll-mt-24">
 							<div>
-								<p className="mb-4 text-">
-									{" "}
-									Soy un desarrollador apasionado con un fuerte interés en la
-									programación tanto Backend como Frontend, siempre con ganas de
-									aprender y afrontar nuevos retos. Mi entusiasmo por la
-									tecnología me impulsa a ampliar constantemente mis
-									habilidades, dominando diversas herramientas y lenguajes para
-									encontrar soluciones creativas y eficientes.
+								<p className="mb-4">
+									Soy un desarrollador Full Stack con una gran pasión por la
+									tecnología, especializado en Backend y Frontend. Me encanta
+									aprender y afrontar nuevos retos, explorando diferentes
+									herramientas y lenguajes para crear soluciones eficientes,
+									escalables e innovadoras que aporten valor real.
 								</p>
 								<p className="mb-4">
-									{" "}
-									Con excelentes habilidades de organización, trabajo bien en
-									equipo y me adapto fácilmente a diferentes entornos. Tengo una
-									mentalidad orientada a la consecución de objetivos y a la
-									obtención de resultados de alta calidad.
+									Cuento con excelentes habilidades de organización y trabajo en
+									equipo, adaptándome fácilmente a diferentes entornos. Mi
+									enfoque está en la resolución de problemas y en el desarrollo
+									ágil, priorizando siempre la calidad y la optimización del
+									código para obtener los mejores resultados.
+								</p>
+								<p className="mb-4">
+									Actualmente, estoy profundizando en el mundo de la
+									inteligencia artificial y el aprendizaje automático,
+									explorando cómo estas tecnologías pueden integrarse en el
+									desarrollo web y software. Me motiva el desafío de aprender
+									nuevos paradigmas y aplicarlos en proyectos innovadores.
+								</p>
+								<p className="mb-4">
+									Estoy en búsqueda activa de oportunidades como desarrollador
+									web, donde pueda aplicar mis conocimientos y seguir creciendo
+									profesionalmente. Me entusiasma la idea de formar parte de un
+									equipo dinámico en el que pueda aportar mis habilidades y
+									seguir evolucionando en este apasionante campo.
 								</p>
 							</div>
 						</section>
