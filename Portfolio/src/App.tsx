@@ -10,7 +10,7 @@ import studies from "./data/studies.json";
 import experience from "./data/experience.json";
 //import projects from "./data/projects.json";
 
-import { FaEye, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaEye, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TbBrandGmail } from "react-icons/tb";
 
@@ -56,10 +56,12 @@ function App() {
 				<div className="lg:flex lg:justify-between lg:gap-4">
 					<header className="lg:sticky lg:top-0 lg:w-[46%] lg:flex lg:flex-col lg:max-h-screen lg:justify-between lg:py-24">
 						<div>
-							<h1 className="text-4xl font-bold sm:text-5xl">
+							<h1 className="text-4xl text-texto-titulos font-bold sm:text-5xl">
 								Alvaro Frias Ruiz
 							</h1>
-							<h2 className="text-2xl font-bold mt-3">Full Stack Developer</h2>
+							<h2 className="text-2xl text-[#dbdfec] font-bold mt-3">
+								Full Stack Developer
+							</h2>
 							<p className="mt-4 max-w-xs leading-normal">
 								Desarrollador Web con ganas de trabajar y expandir mis
 								conocimientos
@@ -81,43 +83,50 @@ function App() {
 									<FaLinkedin className="h-6 w-6" />
 								</a>
 							</li>
-							<li>
-								<a href="https://www.instagram.com/alvarofr09/" target="_blank">
-									<FaInstagram className="h-6 w-6" />
-								</a>
-							</li>
 						</ul>
 					</header>
 					<main id="content" className=" pt-24 lg:w-[54%] lg:py-24">
 						<section id="about" className="scroll-mt-16 lg:scroll-mt-24">
 							<div>
 								<p className="mb-4">
-									Soy un desarrollador Full Stack con una gran pasión por la
-									tecnología, especializado en Backend y Frontend. Me encanta
-									aprender y afrontar nuevos retos, explorando diferentes
-									herramientas y lenguajes para crear soluciones eficientes,
-									escalables e innovadoras que aporten valor real.
+									Soy un <strong>desarrollador Full Stack</strong> con una gran
+									pasión por la <strong>tecnología</strong>, especializado en
+									<strong> Backend y Frontend</strong>. Me encanta aprender y
+									afrontar nuevos retos, explorando diferentes{" "}
+									<strong>herramientas</strong> y <strong>lenguajes</strong>{" "}
+									para crear <strong>soluciones eficientes</strong>,{" "}
+									<strong>escalables</strong> e <strong>innovadoras</strong> que
+									aporten <strong>valor real</strong>.
 								</p>
 								<p className="mb-4">
-									Cuento con excelentes habilidades de organización y trabajo en
-									equipo, adaptándome fácilmente a diferentes entornos. Mi
-									enfoque está en la resolución de problemas y en el desarrollo
-									ágil, priorizando siempre la calidad y la optimización del
-									código para obtener los mejores resultados.
+									Cuento con excelentes habilidades de{" "}
+									<strong>organización</strong> y{" "}
+									<strong>trabajo en equipo</strong>, adaptándome fácilmente a
+									diferentes entornos. Mi enfoque está en la{" "}
+									<strong>resolución de problemas</strong> y en el{" "}
+									<strong>desarrollo ágil</strong>, priorizando siempre la{" "}
+									<strong>calidad</strong> y la{" "}
+									<strong>optimización del código</strong> para obtener los
+									mejores resultados.
 								</p>
 								<p className="mb-4">
-									Actualmente, estoy profundizando en el mundo de la
-									inteligencia artificial y el aprendizaje automático,
-									explorando cómo estas tecnologías pueden integrarse en el
-									desarrollo web y software. Me motiva el desafío de aprender
-									nuevos paradigmas y aplicarlos en proyectos innovadores.
+									Actualmente, estoy profundizando en el mundo de la{" "}
+									<strong>inteligencia artificial</strong> y el{" "}
+									<strong>aprendizaje automático</strong>, explorando cómo estas{" "}
+									<strong>tecnologías</strong> pueden integrarse en el{" "}
+									<strong>desarrollo web</strong> y <strong>software</strong>.
+									Me motiva el desafío de aprender nuevos{" "}
+									<strong>paradigmas</strong> y aplicarlos en{" "}
+									<strong>proyectos innovadores</strong>.
 								</p>
 								<p className="mb-4">
-									Estoy en búsqueda activa de oportunidades como desarrollador
-									web, donde pueda aplicar mis conocimientos y seguir creciendo
-									profesionalmente. Me entusiasma la idea de formar parte de un
-									equipo dinámico en el que pueda aportar mis habilidades y
-									seguir evolucionando en este apasionante campo.
+									Estoy en búsqueda activa de <strong>oportunidades</strong>{" "}
+									como <strong>desarrollador web</strong>, donde pueda aplicar
+									mis conocimientos y seguir creciendo profesionalmente. Me
+									entusiasma la idea de formar parte de un{" "}
+									<strong>equipo dinámico</strong> en el que pueda aportar mis{" "}
+									<strong>habilidades</strong> y seguir evolucionando en este
+									apasionante campo.
 								</p>
 							</div>
 						</section>

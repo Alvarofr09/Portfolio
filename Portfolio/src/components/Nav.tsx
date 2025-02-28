@@ -26,18 +26,18 @@ const Nav: React.FC<NavProps> = ({ items, activeSection }) => {
 							onClick={() => handleClick(item.id)}
 							className={`group flex items-center py-3 ${
 								activeSection === item.id
-									? "text-texto-titulos"
-									: "text-texto-bg-texto-principal"
+									? "text-texto-enfasis"
+									: "text-texto-pricipal"
 							}`}
 						>
 							<span
-								className={`mr-4 h-0.5 w-8 bg-texto-principal group-hover:bg-texto-titulos text-texto-titulos group-hover:w-16 transition-all ${
+								className={`mr-4 h-0.5 w-8  group-hover:bg-texto-enfasis text-texto-enfasis group-hover:w-16 transition-all ${
 									activeSection === item.id
-										? "bg-texto-titulos text-texto-titulos w-16"
+										? "bg-texto-enfasis text-texto-enfasis w-16"
 										: "bg-texto-principal w-8"
 								}`}
 							></span>
-							<span className="uppercase group-hover:text-texto-titulos">
+							<span className="uppercase group-hover:text-texto-enfasis">
 								{item.title}
 							</span>
 						</button>
