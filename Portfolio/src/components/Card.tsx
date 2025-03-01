@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({
 
 				<header className=" z-10 sm:col-span-2">
 					{isProject ? (
-						<img src={image} alt="{enterprise}_image" />
+						<img src={image} alt={`${enterprise}_image`} />
 					) : (
 						<span className="uppercase">{duration}</span>
 					)}
@@ -42,7 +42,7 @@ const Card: React.FC<CardProps> = ({
 					<h3 className="font-medium leading-snug text-texto-titulos">
 						<div></div>
 						<a
-							href={isProject ? links.enterprise : links.github}
+							href={isProject ? links.github : links.enterprise}
 							className="group-hover:text-texto-enfasis"
 						>
 							<span>
@@ -51,9 +51,6 @@ const Card: React.FC<CardProps> = ({
 						</a>
 					</h3>
 					<p className="mt-2 text-sm leading-normal">{description}</p>
-					{/* <ul>
-					<li></li>
-				</ul> */}
 					<Technologies technologies={technologies} />
 				</div>
 			</div>
