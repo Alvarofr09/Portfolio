@@ -13,6 +13,7 @@ import experience from "./data/experience.json";
 import { FaEye, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TbBrandGmail } from "react-icons/tb";
+import Cursor from "./components/Cursor";
 
 const navItems = [
 	{ id: "about", title: "Sobre mi" },
@@ -53,6 +54,7 @@ function App() {
 	return (
 		<>
 			<div className="  mx-auto min-h-screen max-w-7xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+				<Cursor />
 				<div className="lg:flex lg:justify-between lg:gap-4">
 					<header className="lg:sticky lg:top-0 lg:w-[46%] lg:flex lg:flex-col lg:max-h-screen lg:justify-between lg:py-24">
 						<div>
