@@ -12,7 +12,7 @@ const Link: React.FC<LinkProps> = ({ href, text }) => {
 			className="font-medium text-texto-titulos hover:text-texto-enfasis focus-visible:text-texto-enfasis"
 			target="_blank"
 			rel="noopener noreferrer"
-			aria-label="{text} (New Tab)"
+			aria-label={`${text} (New Tab)`}
 		>
 			{text}
 		</a>
