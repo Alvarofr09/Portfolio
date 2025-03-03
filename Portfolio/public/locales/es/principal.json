@@ -1,0 +1,29 @@
+{
+	"role": "Desarrollador Full Stack",
+	"description": "Desarrollador Web con ganas de trabajar y expandir mis conocimientos",
+	"nav1": "Sobre mi",
+	"nav2": "Estudios",
+	"nav3": "Experiencia",
+	"nav4": "Proyectos",
+	"curriculum": "Ver curriculum",
+	"contact": "Contactame",
+	"gmail": "Contactame por gmail",
+	"about": {
+		"intro": "Soy un <strong>desarrollador Full Stack</strong> con una gran pasión por la <strong>tecnología</strong>, especializado en <strong>Backend y Frontend</strong>. Me encanta aprender y afrontar nuevos retos, explorando diferentes <strong>herramientas</strong> y <strong>lenguajes</strong> para crear <strong>soluciones eficientes</strong>, <strong>escalables</strong> e <strong>innovadoras</strong> que aporten <strong>valor real</strong>.",
+		"skills": "Cuento con excelentes habilidades de <strong>organización</strong> y <strong>trabajo en equipo</strong>, adaptándome fácilmente a diferentes entornos. Mi enfoque está en la <strong>resolución de problemas</strong> y en el <strong>desarrollo ágil</strong>, priorizando siempre la <strong>calidad</strong> y la <strong>optimización del código</strong> para obtener los mejores resultados.",
+		"ai": "Actualmente, estoy profundizando en el mundo de la <strong>inteligencia artificial</strong> y el <strong>aprendizaje automático</strong>, explorando cómo estas <strong>tecnologías</strong> pueden integrarse en el <strong>desarrollo web</strong> y <strong>software</strong>. Me motiva el desafío de aprender nuevos <strong>paradigmas</strong> y aplicarlos en <strong>proyectos innovadores</strong>.",
+		"job": "Estoy en búsqueda activa de <strong>oportunidades</strong> como <strong>desarrollador web</strong>, donde pueda aplicar mis conocimientos y seguir creciendo profesionalmente. Me entusiasma la idea de formar parte de un <strong>equipo dinámico</strong> en el que pueda aportar mis <strong>habilidades</strong> y seguir evolucionando en este apasionante campo."
+	},
+	"footer": {
+		"description1": "Esta página web fue diseñada en ",
+		"description2": " y desarrollada en ",
+		"description3": " , hecha por mí. Desarrollada en ",
+		"description4": ", ",
+		"description5": ", ",
+		"description6": "y ",
+		"description7": "con ",
+		"description8": ", desplegada en",
+		"description9": ", y subida en ",
+		"description10": "."
+	}
+}
