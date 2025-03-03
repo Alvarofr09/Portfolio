@@ -24,3 +24,7 @@ body {
 strong {
 	color: var(--color-texto-enfasis);
 }
+
+a {
+	@apply font-medium text-texto-titulos hover:text-texto-enfasis focus-visible:text-texto-enfasis;
+}
