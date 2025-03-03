@@ -1,0 +1,44 @@
+[
+	{
+		"isProject": false,
+		"duration": "Apr — Jun 2024",
+		"role": "Full Stack Developer",
+		"enterprise": "Trademiun",
+		"description": "As a lead developer, I was responsible for the backend, database management, and creating REST APIs, making significant contributions to the web and mobile platforms.",
+		"technologies": [
+			"Node.js",
+			"Express",
+			"MongoDB",
+			"React",
+			"React Native",
+			"Docker"
+		],
+		"image": "https://example.com/trademiun-image.jpg",
+		"links": {
+			"enterprise": "https://trademiun.com",
+			"github": "https://github.com/usuario/trademiun",
+			"demo": "https://trademiun.com/demo"
+		}
+	},
+	{
+		"isProject": false,
+		"duration": "Mar — Jun 2023",
+		"role": "Web Developer Intern",
+		"enterprise": "Seb Creativos",
+		"description": "During my internship at Seb Creativos, I was responsible for creating complete website templates, customizing and integrating plugins, and successfully addressing previously unmet project objectives.",
+		"technologies": [
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"WordPress",
+			"Elementor",
+			"PHP"
+		],
+		"image": "https://example.com/sebcreativos-image.jpg",
+		"links": {
+			"enterprise": "https://sebcreativos.com",
+			"github": "https://github.com/usuario/sebcreativos",
+			"demo": "https://sebcreativos.com/demo"
+		}
+	}
+]

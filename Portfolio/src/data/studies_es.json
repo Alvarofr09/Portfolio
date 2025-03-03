@@ -1,0 +1,60 @@
+[
+	{
+		"isProject": false,
+		"duration": "Feb 2024",
+		"role": "Piscina 42 Málaga",
+		"enterprise": "42 Málaga",
+		"description": "Programa intensivo de 26 días basado en la metodología de aprendizaje peer-to-peer, donde trabajé en la resolución de problemas y programación en C. Durante este período, desarrollé habilidades en entornos Unix, scripting con Shell y lógica de programación de bajo nivel, fortaleciendo mi capacidad de adaptación y aprendizaje autónomo.",
+		"technologies": ["Unix", "Shell", "C"],
+		"links": {
+			"enterprise": "https://www.42network.org/campus/42-malaga/"
+		}
+	},
+	{
+		"isProject": false,
+		"duration": "Oct 2023 — Jun 2024",
+		"role": "Bootcamp Full Stack",
+		"enterprise": "Releevant",
+		"description": "Formación intensiva enfocada en el desarrollo Full Stack, donde adquirí experiencia en tecnologías modernas para el desarrollo web y móvil. Aprendí sobre arquitecturas escalables, bases de datos SQL y NoSQL, metodologías ágiles como Scrum, testing con Jest y herramientas DevOps como Docker. A través de proyectos prácticos, reforcé mi capacidad para crear aplicaciones completas desde el frontend hasta el backend.",
+		"technologies": [
+			"HTML",
+			"CSS",
+			"Bootstrap",
+			"JavaScript",
+			"MySQL",
+			"MongoDB",
+			"GitHub",
+			"Docker",
+			"NodeJS",
+			"React",
+			"Scrum",
+			"Testing-QA (Jest)",
+			"TypeScript"
+		],
+		"links": {
+			"enterprise": "https://releevant.com/"
+		}
+	},
+	{
+		"isProject": false,
+		"duration": "Sep 2021 — Jun 2023",
+		"role": "Grado Superior en Desarrollo de Aplicaciones Web (DAW)",
+		"enterprise": "Medac",
+		"description": "Programa de formación en desarrollo de aplicaciones web donde adquirí conocimientos en diseño, programación y mantenimiento de aplicaciones. Durante este período, trabajé con tecnologías como Java, JavaScript, PHP y bases de datos, aprendiendo a construir sitios dinámicos y responsivos. También reforcé mi capacidad de trabajo en equipo y resolución de problemas en entornos de desarrollo colaborativos.",
+		"technologies": ["Java", "XHTML", "CSS", "JavaScript", "Bootstrap", "PHP"],
+		"links": {
+			"enterprise": "https://medac.es/fp-malaga/avenida-isaac-peral-44"
+		}
+	},
+	{
+		"isProject": false,
+		"duration": "Sep 2019 — Jun 2021",
+		"role": "Grado Medio en Sistemas Microinformáticos y Redes (SMR)",
+		"enterprise": "IES Vega de Mijas",
+		"description": "Formación técnica en informática y redes, donde descubrí mi pasión por la programación. Aprendí sobre sistemas operativos, configuración de redes y fundamentos de desarrollo web con HTML, CSS y PHP. Esta etapa me permitió desarrollar una base sólida en tecnología y afianzar mi interés en el desarrollo de software.",
+		"technologies": ["HTML", "CSS", "PHP"],
+		"links": {
+			"enterprise": "https://blogsaverroes.juntadeandalucia.es/iesvegademijas/"
+		}
+	}
+]
