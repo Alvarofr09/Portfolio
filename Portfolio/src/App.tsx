@@ -20,6 +20,7 @@ import { TbBrandGmail } from "react-icons/tb";
 
 import { useTranslation, Trans } from "react-i18next";
 import LanguageToggle from "./components/LanguageToggle";
+import Title from "./components/Title";
 
 //https://brittanychiang.com/#about
 
@@ -118,6 +119,7 @@ function App() {
 					</header>
 					<main id="content" className=" pt-24 lg:w-[54%] lg:py-24">
 						<section id="about" className="scroll-mt-16 lg:scroll-mt-24">
+							<Title text={t("nav1")} />
 							<div>
 								<p className="mb-4">
 									<Trans
@@ -150,7 +152,7 @@ function App() {
 							</div>
 						</section>
 						<section className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-							<div className="flex gap-4">
+							<div className="flex flex-wrap gap-4">
 								<a
 									href={`${
 										i18n.language === "es" ? "/CV_AFR_ES.pdf" : "/CV_AFR_EN.pdf"
@@ -190,6 +192,7 @@ function App() {
 							id="studies"
 							className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
 						>
+							<Title text={t("nav2")} />
 							<ol className="group/list">
 								{studies.map(
 									(item: CardProps, index: Key | null | undefined) => (
@@ -202,6 +205,7 @@ function App() {
 							id="experience"
 							className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
 						>
+							<Title text={t("nav3")} />
 							<ol className="group/list">
 								{experience.map(
 									(item: CardProps, index: Key | null | undefined) => (
@@ -214,6 +218,7 @@ function App() {
 							id="projects"
 							className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
 						>
+							<Title text={t("nav4")} />
 							<ol className="group/list">
 								{projects.map(
 									(item: CardProps, index: Key | null | undefined) => (
