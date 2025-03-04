@@ -11,8 +11,8 @@ import studiesEs from "./data/studies_es.json";
 import studiesEn from "./data/studies_en.json";
 import experienceEs from "./data/experience_es.json";
 import experienceEn from "./data/experience_en.json";
-//import projectsEs from "./data/projects_es.json";
-//import projectsEn from "./data/projects_en.json";
+import projectsEs from "./data/projects_es.json";
+import projectsEn from "./data/projects_en.json";
 
 import { FaEye, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -40,6 +40,9 @@ function App() {
 	const [experience, setExperience] = useState(
 		getLocalizedData(i18n.language, experienceEs, experienceEn)
 	);
+	const [projects, setProjects] = useState(
+		getLocalizedData(i18n.language, projectsEs, projectsEn)
+	);
 
 	const navItems = [
 		{ id: "about", title: t("nav1") },
@@ -51,6 +54,7 @@ function App() {
 	useEffect(() => {
 		setStudies(getLocalizedData(i18n.language, studiesEs, studiesEn));
 		setExperience(getLocalizedData(i18n.language, experienceEs, experienceEn));
+		setProjects(getLocalizedData(i18n.language, projectsEs, projectsEn));
 	}, [i18n.language]);
 
 	useEffect(() => {
@@ -211,11 +215,11 @@ function App() {
 							className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
 						>
 							<ol className="group/list">
-								{/* {projects.map(
+								{projects.map(
 									(item: CardProps, index: Key | null | undefined) => (
 										<Card key={index} {...item} />
 									)
-								)} */}
+								)}
 							</ol>
 						</section>
 						<footer className="max-w-md pb-16 text-sm text-salte-500 sm:pb-0">
