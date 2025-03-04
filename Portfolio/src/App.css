@@ -6,6 +6,7 @@
 	--breakpoint-md: 768px;
 	--breakpoint-lg: 976px;
 
+	--color-background: #0f1c30;
 	--color-texto-principal: #e2e6f1;
 	--color-texto-titulos: #c0d0ef;
 	--color-texto-enfasis: #73aafc;
@@ -16,7 +17,7 @@
 }
 
 body {
-	@apply bg-[#0f1c30] 
+	@apply bg-background
 	selection:bg-texto-enfasis
 	selection:text-texto-principal;
 }
