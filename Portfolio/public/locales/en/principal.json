@@ -17,13 +17,12 @@
 	"footer": {
 		"description1": "This website was designed in ",
 		"description2": " and developed in ",
-		"description3": " , made by me. Developed with ",
+		"description3": ", made by me. Developed with ",
 		"description4": ", ",
-		"description5": ", ",
-		"description6": "and ",
-		"description7": "with ",
-		"description8": ", deployed on",
-		"description9": ", and uploaded on ",
-		"description10": "."
+		"description5": " and ",
+		"description6": " with ",
+		"description7": ", deployed on ",
+		"description8": ", and uploaded on ",
+		"description9": "."
 	}
 }

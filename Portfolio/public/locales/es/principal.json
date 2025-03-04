@@ -17,13 +17,12 @@
 	"footer": {
 		"description1": "Esta página web fue diseñada en ",
 		"description2": " y desarrollada en ",
-		"description3": " , hecha por mí. Desarrollada en ",
+		"description3": ", hecha por mí. Desarrollada en ",
 		"description4": ", ",
-		"description5": ", ",
-		"description6": "y ",
-		"description7": "con ",
-		"description8": ", desplegada en",
-		"description9": ", y subida en ",
-		"description10": "."
+		"description5": " y ",
+		"description6": " con ",
+		"description7": ", desplegada en ",
+		"description8": ", y subida en ",
+		"description9": "."
 	}
 }
