@@ -216,7 +216,31 @@ function App() {
 							</ol>
 						</section>
 						<footer className="max-w-md pb-16 text-sm text-salte-500 sm:pb-0">
-							<p>{t("footer.description1")}</p>
+							<p>
+								{t("footer.description1")}
+								<Link href="https://www.canva.com/" text="Canva" />
+								{t("footer.description2")}
+								<Link
+									href="https://code.visualstudio.com/"
+									text="Visual Studio Code"
+								/>
+								{t("footer.description3")}
+								<Link href="https://es.react.dev/" text="React" />
+								{t("footer.description4")}
+								<Link
+									href="https://www.typescriptlang.org/"
+									text="Typescript"
+								/>
+								{t("footer.description5")}
+								<Link href="https://tailwindcss.com/" text="Tailwind" />
+								{t("footer.description6")}
+								<Link href="https://vitejs.dev/" text="Vite" />
+								{t("footer.description7")}
+								<Link href="https://vercel.com/" text="Vercel" />
+								{t("footer.description8")}
+								<Link href="https://github.com/" text="GitHub" />
+								{t("footer.description9")}
+							</p>
 						</footer>
 					</main>
 				</div>
