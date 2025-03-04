@@ -5,7 +5,7 @@ export interface CardProps {
 	isProject: boolean;
 	duration?: string;
 	role: string;
-	enterprise: string;
+	enterprise?: string;
 	description: string;
 	technologies: string[];
 	image?: string;
@@ -28,10 +28,16 @@ const Card: React.FC<CardProps> = ({
 }) => {
 	return (
 		<li className="mb-12">
-			<div className="relative group grid pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+			<div
+				className="relative group grid pb-1 sm:grid-cols-9 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+				onClick={() =>
+					window.open(isProject ? links.github : links.enterprise, "_blank")
+				}
+				style={{ cursor: "pointer" }}
+			>
 				<div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-4 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
 
-				<header className=" z-10 sm:col-span-2">
+				<header className=" z-10 sm:col-span-3">
 					{isProject ? (
 						<img src={image} alt={`${enterprise}_image`} />
 					) : (
@@ -44,9 +50,19 @@ const Card: React.FC<CardProps> = ({
 						<a
 							href={isProject ? links.github : links.enterprise}
 							className="group-hover:text-texto-enfasis"
+							target="_blank"
+							onClick={(e) => e.stopPropagation()}
 						>
 							<span>
-								{role} · <span>{enterprise}</span>
+								{role}{" "}
+								{!isProject ? (
+									<>
+										{" "}
+										· <span>{enterprise}</span>
+									</>
+								) : (
+									""
+								)}
 							</span>
 						</a>
 					</h3>
