@@ -15,9 +15,7 @@
 		],
 		"image": "https://example.com/trademiun-image.jpg",
 		"links": {
-			"enterprise": "https://trademiun.com",
-			"github": "https://github.com/usuario/trademiun",
-			"demo": "https://trademiun.com/demo"
+			"enterprise": "https://www.linkedin.com/company/trademiun/"
 		}
 	},
 	{
@@ -36,9 +34,7 @@
 		],
 		"image": "https://example.com/sebcreativos-image.jpg",
 		"links": {
-			"enterprise": "https://sebcreativos.com",
-			"github": "https://github.com/usuario/sebcreativos",
-			"demo": "https://sebcreativos.com/demo"
+			"enterprise": "https://sebcreativos.es"
 		}
 	}
 ]
