@@ -1,0 +1,12 @@
+[
+	{
+		"isProject": true,
+		"image": "/images/Logo.png",
+		"role": "Portfolio",
+		"description": "My first portfolio, showcasing my projects and growth as a developer.",
+		"technologies": ["React", "TypeScript", "TailwindCSS", "Vite", "i18Next"],
+		"links": {
+			"github": "https://github.com/Alvarofr09/Portfolio"
+		}
+	}
+]
