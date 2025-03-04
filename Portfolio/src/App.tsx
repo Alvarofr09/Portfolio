@@ -159,7 +159,9 @@ function App() {
 									<FaEye className="h-4 w-4 " />
 								</a>
 								<a
-									href="mailto:alvarofriasruiz03@gmail.com?subject=Consulta%20sobre%20tu%20perfil"
+									href={`mailto:alvarofriasruiz03@gmail.com?subject=${t(
+										"contactSub"
+									)}`}
 									target="_blank"
 									rel="noopener noreferrer"
 									className="inline-flex items-center gap-2 font-medium text-texto-titulos hover:text-texto-enfasis focus-visible:text-texto-enfasis"
@@ -168,7 +170,9 @@ function App() {
 									<MdEmail className="h-4 w-4 " />
 								</a>
 								<a
-									href="https://mail.google.com/mail/?view=cm&fs=1&to=alvarofriasruiz03@gmail.com&su=Consulta%20sobre%20tu%20perfil"
+									href={`https://mail.google.com/mail/?view=cm&fs=1&to=alvarofriasruiz03@gmail.com&su=${t(
+										"contactSub"
+									)}`}
 									target="_blank"
 									rel="noopener noreferrer"
 									className="inline-flex items-center gap-2 font-medium text-texto-titulos hover:text-texto-enfasis focus-visible:text-texto-enfasis"
@@ -202,7 +206,6 @@ function App() {
 								)}
 							</ol>
 						</section>
-
 						<section
 							id="projects"
 							className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
